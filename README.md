@@ -54,4 +54,4 @@ After these steps the prometheus service will start working successfully.
 > These terminals musn't close for maintain access.
 After these steps Prometheus and Grafana working successfully. These services accessible "localhost:9090" and "localhost:3000" addresses.
 Prometheus Interface:
-![Prometheus Interface](/images/prometheus-interface.png)
+![Prometheus Interface](/assets/images/prometheus-interface.png)
