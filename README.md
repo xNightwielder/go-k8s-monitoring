@@ -28,7 +28,16 @@ This application monitoring kubernetes pods which basic Go microservices.
 > This go application opened outside by Kubernetes Service type's NodePort. If you want to connect to the go application, you must learn which opened outside port this app. Use 'kubectl get services' command for which port opened app. Basic Go app working now which
 > after this stage. "localhost:exposedport" for connect app.
 
-3. Apply the Prometheus Deployment. You must follow these steps in order:
+3. Apply Horizontal Pod Autoscale for automatically updates a workload resource.
+
+   ```
+    kubectl apply -f horizontal-autoscale
+   ```
+
+> [!IMPORTANT]
+> You must check kubectl top pods command. If command's output error, you must activate metrics-server on Kubernetes Cluster. Activate metric-server has different way which your using kubernetes cluster. You must search it. For example activate metric-server command on minikube cluster: minikube addons enable metrics-server
+
+3. Apply Prometheus Deployment. You must follow these steps in order:
    
       ```
       cd prometheus
