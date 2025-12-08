@@ -22,5 +22,9 @@ spec:
       - name: golang
         image: nightwielder/k8smonitor:latest
         ports:
-        - containerPort: 8080
-
+          - containerPort: 8080
+        resources:
+          requests:
+            cpu: "200m"
+          limits:
+            cpu: "500m"
